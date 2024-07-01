@@ -12,46 +12,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-        }
-
-        .menu {
-            background-color: transparent;
-            display: none;
-        }
-
-        .menu-toggle {
-            display: block;
-        }
-
-        @media (min-width: 640px) {
-            .menu {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+        <style>
+            /* Define Cooper Hewitt font */
+            @font-face {
+                font-family: 'Cooper Hewitt';
+                src: url('./fonts/CooperHewitt-Regular.woff2') format('woff2'),
+                     url('./fonts/CooperHewitt-Regular.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
             }
-
-            .menu-toggle {
+    
+            /* Apply Cooper Hewitt to all text except titles */
+            body,
+            p,
+            ul,
+            li,
+            a {
+                font-family: 'Cooper Hewitt', sans-serif;
+            }
+    
+            /* Tailwind CSS classes and your custom styles */
+            html {
+                scroll-behavior: smooth;
+            }
+    
+            body {
+                font-family: 'Poppins', sans-serif; /* Fallback font */
+                overflow-x: hidden;
+            }
+    
+            /* Other existing styles */
+            .menu {
+                background-color: transparent;
                 display: none;
             }
-        }
-
-        .hidden.md\:hidden {
-            display: none;
-            background-color: white;
-        }
-    </style>
+    
+            /* Media queries and other styles */
+            @media (min-width: 640px) {
+                /* Adjustments for larger screens */
+                .menu {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+    
+                .menu-toggle {
+                    display: none;
+                }
+            }
+    
+            /* Additional styles */
+            .hidden.md\:hidden {
+                display: none;
+                background-color: white;
+            }
+        </style>
 </head>
 
 <body>
-    <nav class="fixed-navbar py-4" style="position: fixed; top: 0; left: 0; z-index: 100; right: 0;">
+    <nav class="fixed-navbar py-4" style="position: fixed; top: 0; left: 0; z-index: 100; right: 0; background-color: rgba(15, 18, 60, 0.5);backdrop-filter: blur(10px);">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="#" class="text-xl font-bold mr-4">
